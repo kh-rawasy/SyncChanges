@@ -1,0 +1,621 @@
+Build started
+git clone -q --branch=master https://github.com/mganss/SyncChanges.git C:\projects\syncchanges
+git checkout -qf 03e6cd0e405ee1f1d5aa1f21ee29e5c796d19c75
+dotnet --info
+.NET SDK (reflecting any global.json):
+ Version:   5.0.404
+ Commit:    72c68b830a
+Runtime Environment:
+ OS Name:     Windows
+ OS Version:  10.0.17763
+ OS Platform: Windows
+ RID:         win10-x64
+ Base Path:   C:\Program Files\dotnet\sdk\5.0.404\
+Host (useful for support):
+  Version: 5.0.13
+  Commit:  b3afe99225
+.NET SDKs installed:
+  1.1.14 [C:\Program Files\dotnet\sdk]
+  2.1.202 [C:\Program Files\dotnet\sdk]
+  2.1.806 [C:\Program Files\dotnet\sdk]
+  2.2.402 [C:\Program Files\dotnet\sdk]
+  3.0.103 [C:\Program Files\dotnet\sdk]
+  3.1.202 [C:\Program Files\dotnet\sdk]
+  3.1.416 [C:\Program Files\dotnet\sdk]
+  5.0.404 [C:\Program Files\dotnet\sdk]
+.NET runtimes installed:
+  Microsoft.AspNetCore.All 2.1.18 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.All]
+  Microsoft.AspNetCore.All 2.2.7 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.All]
+  Microsoft.AspNetCore.App 2.1.18 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 2.2.7 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 3.0.3 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 3.1.4 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 3.1.22 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 5.0.13 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App]
+  Microsoft.NETCore.App 1.0.16 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.NETCore.App 1.1.13 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.NETCore.App 2.0.9 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.NETCore.App 2.1.18 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.NETCore.App 2.2.7 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.NETCore.App 3.0.3 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.NETCore.App 3.1.4 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.NETCore.App 3.1.22 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.NETCore.App 5.0.13 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.WindowsDesktop.App 3.0.3 [C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App]
+  Microsoft.WindowsDesktop.App 3.1.4 [C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App]
+  Microsoft.WindowsDesktop.App 3.1.22 [C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App]
+  Microsoft.WindowsDesktop.App 5.0.13 [C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App]
+To install additional .NET runtimes or SDKs:
+  https://aka.ms/dotnet-download
+dotnet restore
+  Determining projects to restore...
+  Restored C:\projects\syncchanges\SyncChanges.Service\SyncChanges.Service.csproj (in 6.04 sec).
+  Restored C:\projects\syncchanges\SyncChanges.Console\SyncChanges.Console.csproj (in 6.25 sec).
+  Restored C:\projects\syncchanges\SyncChanges\SyncChanges.csproj (in 3.1 sec).
+  Restored C:\projects\syncchanges\SyncChanges.Tests\SyncChanges.Tests.csproj (in 3.63 sec).
+dotnet build -c Release
+Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET
+Copyright (C) Microsoft Corporation. All rights reserved.
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  SyncChanges -> C:\projects\syncchanges\SyncChanges\bin\Release\netstandard2.0\SyncChanges.dll
+  SyncChanges.Tests -> C:\projects\syncchanges\SyncChanges.Tests\bin\Release\net5.0\SyncChanges.Tests.dll
+  SyncChanges.Service -> C:\projects\syncchanges\SyncChanges.Service\bin\Release\net461\SyncChanges.Service.exe
+  SyncChanges.Console -> C:\projects\syncchanges\SyncChanges.Console\bin\Release\net5.0\SyncChanges.Console.dll
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+Time Elapsed 00:00:07.45
+dotnet publish SyncChanges.Console -c Release -f net5.0
+Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET
+Copyright (C) Microsoft Corporation. All rights reserved.
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  SyncChanges -> C:\projects\syncchanges\SyncChanges\bin\Release\netstandard2.0\SyncChanges.dll
+  SyncChanges.Console -> C:\projects\syncchanges\SyncChanges.Console\bin\Release\net5.0\SyncChanges.Console.dll
+  SyncChanges.Console -> C:\projects\syncchanges\SyncChanges.Console\bin\Release\net5.0\publish\
+dotnet publish SyncChanges.Service -c Release -f net461
+Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET
+Copyright (C) Microsoft Corporation. All rights reserved.
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  SyncChanges -> C:\projects\syncchanges\SyncChanges\bin\Release\netstandard2.0\SyncChanges.dll
+  SyncChanges.Service -> C:\projects\syncchanges\SyncChanges.Service\bin\Release\net461\SyncChanges.Service.exe
+  SyncChanges.Service -> C:\projects\syncchanges\SyncChanges.Service\bin\Release\net461\publish\
+dotnet pack --include-symbols --include-source -c Release SyncChanges
+Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET
+Copyright (C) Microsoft Corporation. All rights reserved.
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  SyncChanges -> C:\projects\syncchanges\SyncChanges\bin\Release\netstandard2.0\SyncChanges.dll
+C:\Program Files\dotnet\sdk\5.0.404\Sdks\NuGet.Build.Tasks.Pack\buildCrossTargeting\NuGet.Build.Tasks.Pack.targets(221,5): warning NU5125: The 'licenseUrl' element will be deprecated. Consider using the 'license' element instead. [C:\projects\syncchanges\SyncChanges\SyncChanges.csproj]
+  Successfully created package 'C:\projects\syncchanges\SyncChanges\bin\Release\SyncChanges.3.0.405.nupkg'.
+  Successfully created package 'C:\projects\syncchanges\SyncChanges\bin\Release\SyncChanges.3.0.405.snupkg'.
+dotnet pack --include-symbols --include-source -c Release SyncChanges.Console
+Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET
+Copyright (C) Microsoft Corporation. All rights reserved.
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  SyncChanges -> C:\projects\syncchanges\SyncChanges\bin\Release\netstandard2.0\SyncChanges.dll
+  SyncChanges.Console -> C:\projects\syncchanges\SyncChanges.Console\bin\Release\net5.0\SyncChanges.Console.dll
+C:\Program Files\dotnet\sdk\5.0.404\Sdks\NuGet.Build.Tasks.Pack\build\NuGet.Build.Tasks.Pack.targets(221,5): warning NU5125: The 'licenseUrl' element will be deprecated. Consider using the 'license' element instead. [C:\projects\syncchanges\SyncChanges.Console\SyncChanges.Console.csproj]
+  Successfully created package 'C:\projects\syncchanges\SyncChanges.Console\bin\Release\SyncChanges.Console.3.0.405.nupkg'.
+  Successfully created package 'C:\projects\syncchanges\SyncChanges.Console\bin\Release\SyncChanges.Console.3.0.405.snupkg'.
+dotnet pack --include-symbols --include-source -c Release SyncChanges.Service
+Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET
+Copyright (C) Microsoft Corporation. All rights reserved.
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  SyncChanges -> C:\projects\syncchanges\SyncChanges\bin\Release\netstandard2.0\SyncChanges.dll
+  SyncChanges.Service -> C:\projects\syncchanges\SyncChanges.Service\bin\Release\net461\SyncChanges.Service.exe
+C:\Program Files\dotnet\sdk\5.0.404\Sdks\NuGet.Build.Tasks.Pack\build\NuGet.Build.Tasks.Pack.targets(221,5): warning NU5125: The 'licenseUrl' element will be deprecated. Consider using the 'license' element instead. [C:\projects\syncchanges\SyncChanges.Service\SyncChanges.Service.csproj]
+  Successfully created package 'C:\projects\syncchanges\SyncChanges.Service\bin\Release\SyncChanges.Service.3.0.405.nupkg'.
+  Successfully created package 'C:\projects\syncchanges\SyncChanges.Service\bin\Release\SyncChanges.Service.3.0.405.snupkg'.
+7z a -mx=9 SyncChanges.Console.%APPVEYOR_BUILD_VERSION%.zip ".\SyncChanges.Console\bin\Release\net5.0\publish\*"
+7-Zip 19.00 (x64) : Copyright (c) 1999-2018 Igor Pavlov : 2019-02-21
+Scanning the drive:
+20 folders, 56 files, 16675988 bytes (16 MiB)
+Creating archive: SyncChanges.Console.3.0.405.zip
+Add new data to archive: 20 folders, 56 files, 16675988 bytes (16 MiB)
+Files read from disk: 56
+Archive size: 5930684 bytes (5792 KiB)
+Everything is Ok
+7z a -mx=9 SyncChanges.Service.%APPVEYOR_BUILD_VERSION%.zip ".\SyncChanges.Service\bin\Release\net461\publish\*"
+7-Zip 19.00 (x64) : Copyright (c) 1999-2018 Igor Pavlov : 2019-02-21
+Scanning the drive:
+10 folders, 149 files, 16160843 bytes (16 MiB)
+Creating archive: SyncChanges.Service.3.0.405.zip
+Add new data to archive: 10 folders, 149 files, 16160843 bytes (16 MiB)
+Files read from disk: 149
+Archive size: 5809237 bytes (5674 KiB)
+Everything is Ok
+if (-not $env:APPVEYOR_PULL_REQUEST_NUMBER) {
+    dotnet tool install --global dotnet-sonarscanner
+    dotnet sonarscanner begin /k:"mganss_SyncChanges" /v:$env:APPVEYOR_BUILD_VERSION /o:"mganss-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="$env:sonar_token" /d:sonar.cs.opencover.reportsPaths="$($env:APPVEYOR_BUILD_FOLDER)\coverage.xml" /d:sonar.exclusions="**/*.xsd" /d:sonar.coverage.exclusions="**/Program.cs"
+    dotnet build
+}
+You can invoke the tool using the following command: dotnet-sonarscanner
+Tool 'dotnet-sonarscanner' (version '5.4.1') was successfully installed.
+SonarScanner for MSBuild 5.4.1
+Using the .NET Core version of the Scanner for MSBuild
+Pre-processing started.
+Preparing working directories...
+10:18:44.216  Updating build integration targets...
+10:18:44.88  Fetching analysis configuration settings...
+10:18:45.77  Provisioning analyzer assemblies for cs...
+10:18:45.772  Installing required Roslyn analyzers...
+10:18:47.026  Provisioning analyzer assemblies for vbnet...
+10:18:47.027  Installing required Roslyn analyzers...
+10:18:47.054  Pre-processing succeeded.
+Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET
+Copyright (C) Microsoft Corporation. All rights reserved.
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+C:\projects\syncchanges\SyncChanges\Synchronizer.cs(138,21): warning S3776: Refactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed. [C:\projects\syncchanges\SyncChanges\SyncChanges.csproj]
+C:\projects\syncchanges\SyncChanges\Synchronizer.cs(277,22): warning S3776: Refactor this method to reduce its Cognitive Complexity from 31 to the 15 allowed. [C:\projects\syncchanges\SyncChanges\SyncChanges.csproj]
+C:\projects\syncchanges\SyncChanges\Synchronizer.cs(390,28): warning S3776: Refactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed. [C:\projects\syncchanges\SyncChanges\SyncChanges.csproj]
+C:\projects\syncchanges\SyncChanges\Synchronizer.cs(482,22): warning S3776: Refactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed. [C:\projects\syncchanges\SyncChanges\SyncChanges.csproj]
+  SyncChanges -> C:\projects\syncchanges\SyncChanges\bin\Debug\netstandard2.0\SyncChanges.dll
+  Sonar: (SyncChanges.csproj) Project processed successfully
+  SyncChanges.Tests -> C:\projects\syncchanges\SyncChanges.Tests\bin\Debug\net5.0\SyncChanges.Tests.dll
+  Sonar: (SyncChanges.Tests.csproj) Project processed successfully
+  SyncChanges.Service -> C:\projects\syncchanges\SyncChanges.Service\bin\Debug\net461\SyncChanges.Service.exe
+  Sonar: (SyncChanges.Service.csproj) Project processed successfully
+  SyncChanges.Console -> C:\projects\syncchanges\SyncChanges.Console\bin\Debug\net5.0\SyncChanges.Console.dll
+  Sonar: (SyncChanges.Console.csproj) Project processed successfully
+Build succeeded.
+C:\projects\syncchanges\SyncChanges\Synchronizer.cs(138,21): warning S3776: Refactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed. [C:\projects\syncchanges\SyncChanges\SyncChanges.csproj]
+C:\projects\syncchanges\SyncChanges\Synchronizer.cs(277,22): warning S3776: Refactor this method to reduce its Cognitive Complexity from 31 to the 15 allowed. [C:\projects\syncchanges\SyncChanges\SyncChanges.csproj]
+C:\projects\syncchanges\SyncChanges\Synchronizer.cs(390,28): warning S3776: Refactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed. [C:\projects\syncchanges\SyncChanges\SyncChanges.csproj]
+C:\projects\syncchanges\SyncChanges\Synchronizer.cs(482,22): warning S3776: Refactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed. [C:\projects\syncchanges\SyncChanges\SyncChanges.csproj]
+    4 Warning(s)
+    0 Error(s)
+Time Elapsed 00:00:16.07
+dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput="..\coverage.xml" SyncChanges.Tests\SyncChanges.Tests.csproj /p:Include="[SyncChanges]*"
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+C:\projects\syncchanges\SyncChanges\Synchronizer.cs(138,21): warning S3776: Refactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed. [C:\projects\syncchanges\SyncChanges\SyncChanges.csproj]
+C:\projects\syncchanges\SyncChanges\Synchronizer.cs(277,22): warning S3776: Refactor this method to reduce its Cognitive Complexity from 31 to the 15 allowed. [C:\projects\syncchanges\SyncChanges\SyncChanges.csproj]
+C:\projects\syncchanges\SyncChanges\Synchronizer.cs(390,28): warning S3776: Refactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed. [C:\projects\syncchanges\SyncChanges\SyncChanges.csproj]
+C:\projects\syncchanges\SyncChanges\Synchronizer.cs(482,22): warning S3776: Refactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed. [C:\projects\syncchanges\SyncChanges\SyncChanges.csproj]
+  SyncChanges -> C:\projects\syncchanges\SyncChanges\bin\Debug\netstandard2.0\SyncChanges.dll
+  Sonar: (SyncChanges.csproj) Project processed successfully
+  SyncChanges.Tests -> C:\projects\syncchanges\SyncChanges.Tests\bin\Debug\net5.0\SyncChanges.Tests.dll
+  Sonar: (SyncChanges.Tests.csproj) Project processed successfully
+Test run for C:\projects\syncchanges\SyncChanges.Tests\bin\Debug\net5.0\SyncChanges.Tests.dll (.NETCoreApp,Version=v5.0)
+Microsoft (R) Test Execution Command Line Tool Version 16.11.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+Passed!  - Failed:     0, Passed:    12, Skipped:     0, Total:    12, Duration: 1 m 31 s - SyncChanges.Tests.dll (net5.0)
+Calculating coverage result...
+  Generating report '..\coverage.xml'
++-------------+--------+--------+--------+
+| Module      | Line   | Branch | Method |
++-------------+--------+--------+--------+
+| SyncChanges | 93.73% | 93.2%  | 100%   |
++-------------+--------+--------+--------+
++---------+--------+--------+--------+
+|         | Line   | Branch | Method |
++---------+--------+--------+--------+
+| Total   | 93.73% | 93.2%  | 100%   |
++---------+--------+--------+--------+
+| Average | 93.73% | 93.2%  | 100%   |
++---------+--------+--------+--------+
+if (-not $env:APPVEYOR_PULL_REQUEST_NUMBER) {
+    dotnet sonarscanner end /d:sonar.login="$env:sonar_token"
+}
+SonarScanner for MSBuild 5.4.1
+Using the .NET Core version of the Scanner for MSBuild
+Post-processing started.
+10:20:48.729  The exclude flag has been set so the project will not be analyzed. Project file: C:\projects\syncchanges\SyncChanges.Tests\SyncChanges.Tests.csproj
+10:20:48.73  The exclude flag has been set so the project will not be analyzed. Project file: C:\projects\syncchanges\SyncChanges.Tests\SyncChanges.Tests.csproj
+10:20:48.74  10:20:48.74  WARNING: File 'C:\Users\appveyor\.nuget\packages\nlog.schema\4.7.13\contentFiles\any\any\NLog.xsd' is not located under the root directory 'C:\projects\syncchanges' and will not be analyzed.
+Calling the SonarScanner CLI...
+INFO: Scanner configuration file: C:\Users\appveyor\.dotnet\tools\.store\dotnet-sonarscanner\5.4.1\dotnet-sonarscanner\5.4.1\tools\net5.0\any\sonar-scanner-4.6.2.2472\bin\..\conf\sonar-scanner.properties
+INFO: Project root configuration file: C:\projects\syncchanges\.sonarqube\out\sonar-project.properties
+INFO: SonarScanner 4.6.2.2472
+INFO: Java 14 Oracle Corporation (64-bit)
+INFO: Windows Server 2019 10.0 amd64
+INFO: User cache: C:\Users\appveyor\.sonar\cache
+INFO: Scanner configuration file: C:\Users\appveyor\.dotnet\tools\.store\dotnet-sonarscanner\5.4.1\dotnet-sonarscanner\5.4.1\tools\net5.0\any\sonar-scanner-4.6.2.2472\bin\..\conf\sonar-scanner.properties
+INFO: Project root configuration file: C:\projects\syncchanges\.sonarqube\out\sonar-project.properties
+INFO: Analyzing on SonarCloud
+INFO: Default locale: "en_US", source code encoding: "windows-1252" (analysis is platform dependent)
+INFO: Load global settings
+INFO: Load global settings (done) | time=711ms
+INFO: Server id: 1BD809FA-AWHW8ct9-T_TB3XqouNu
+INFO: User cache: C:\Users\appveyor\.sonar\cache
+INFO: Load/download plugins
+INFO: Load plugins index
+INFO: Load plugins index (done) | time=171ms
+INFO: Load/download plugins (done) | time=24927ms
+INFO: Loaded core extensions: developer-scanner
+INFO: Found an active CI vendor: 'AppVeyor'
+INFO: Load project settings for component key: 'mganss_SyncChanges'
+INFO: Load project settings for component key: 'mganss_SyncChanges' (done) | time=146ms
+INFO: Process project properties
+INFO: Execute project builders
+INFO: Execute project builders (done) | time=63ms
+INFO: Project key: mganss_SyncChanges
+INFO: Base dir: C:\projects\syncchanges
+INFO: Working dir: C:\projects\syncchanges\.sonarqube\out\.sonar
+INFO: Load project branches
+INFO: Load project branches (done) | time=141ms
+INFO: Check ALM binding of project 'mganss_SyncChanges'
+INFO: Detected project binding: BOUND
+INFO: Check ALM binding of project 'mganss_SyncChanges' (done) | time=109ms
+INFO: Load project pull requests
+INFO: Load project pull requests (done) | time=133ms
+INFO: Load branch configuration
+INFO: Load branch configuration (done) | time=3ms
+INFO: Load quality profiles
+INFO: Load quality profiles (done) | time=175ms
+INFO: Load active rules
+INFO: Load active rules (done) | time=4484ms
+INFO: Organization key: mganss-github
+INFO: Load project repositories
+INFO: Load project repositories (done) | time=166ms
+INFO: Indexing files...
+INFO: Project configuration:
+INFO:   Excluded sources: **/build-wrapper-dump.json, **/*.xsd
+INFO:   Excluded sources for coverage: **/Program.cs
+INFO: Indexing files of module 'SyncChanges.Console'
+INFO:   Base dir: C:\projects\syncchanges\SyncChanges.Console
+INFO:   Source paths: Program.cs, App.config, config.example.json, NLog.config, NLo...
+INFO:   Excluded sources: **/build-wrapper-dump.json, **/*.xsd
+INFO:   Excluded sources for coverage: **/Program.cs
+INFO: Indexing files of module 'SyncChanges'
+INFO:   Base dir: C:\projects\syncchanges\SyncChanges
+INFO:   Source paths: Change.cs, ChangeInfo.cs, Config.cs, ForeignKeyConstraint.cs,...
+INFO:   Excluded sources: **/build-wrapper-dump.json, **/*.xsd
+INFO:   Excluded sources for coverage: **/Program.cs
+INFO: Indexing files of module 'SyncChanges'
+INFO:   Base dir: C:\projects\syncchanges\SyncChanges
+INFO:   Excluded sources: **/build-wrapper-dump.json, **/*.xsd
+INFO:   Excluded sources for coverage: **/Program.cs
+INFO: Indexing files of module 'SyncChanges.Service'
+INFO:   Base dir: C:\projects\syncchanges\SyncChanges.Service
+INFO:   Source paths: Program.cs, ProjectInstaller.cs, ProjectInstaller.Designer.cs...
+INFO:   Excluded sources: **/build-wrapper-dump.json, **/*.xsd
+INFO:   Excluded sources for coverage: **/Program.cs
+INFO: Indexing files of module 'mganss_SyncChanges'
+INFO:   Base dir: C:\projects\syncchanges
+INFO:   Excluded sources: **/build-wrapper-dump.json, **/*.xsd
+INFO:   Excluded sources for coverage: **/Program.cs
+INFO: 19 files indexed
+INFO: 2 files ignored because of inclusion/exclusion patterns
+INFO: 1 file ignored because of scm ignore settings
+INFO: Quality profile for cs: Sonar way
+INFO: Quality profile for json: SonarQube Way
+INFO: ------------- Run sensors on module SyncChanges.Console
+INFO: Load metrics repository
+INFO: Load metrics repository (done) | time=156ms
+INFO: Sensor IaC CloudFormation Sensor [iac]
+INFO: 0 source files to be analyzed
+INFO: 0/0 source files have been analyzed
+INFO: Sensor IaC CloudFormation Sensor [iac] (done) | time=27ms
+INFO: Sensor C# Project Type Information [csharp]
+INFO: Sensor C# Project Type Information [csharp] (done) | time=1ms
+INFO: Sensor C# Analysis Log [csharp]
+INFO: Roslyn version: 3.11.0.0
+INFO: Language version: CSharp9
+INFO: Concurrent execution: disabled
+INFO: Sensor C# Analysis Log [csharp] (done) | time=313ms
+INFO: Sensor C# Properties [csharp]
+INFO: Sensor C# Properties [csharp] (done) | time=3ms
+INFO: Sensor HTML [web]
+INFO: Sensor HTML [web] (done) | time=4ms
+INFO: Sensor Text Sensor [text]
+INFO: 2 source files to be analyzed
+INFO: 2/2 source files have been analyzed
+INFO: Sensor Text Sensor [text] (done) | time=14ms
+INFO: Sensor VB.NET Project Type Information [vbnet]
+INFO: Sensor VB.NET Project Type Information [vbnet] (done) | time=2ms
+INFO: Sensor VB.NET Analysis Log [vbnet]
+INFO: Sensor VB.NET Analysis Log [vbnet] (done) | time=19ms
+INFO: Sensor VB.NET Properties [vbnet]
+INFO: Sensor VB.NET Properties [vbnet] (done) | time=0ms
+INFO: Sensor JaCoCo XML Report Importer [jacoco]
+INFO: 'sonar.coverage.jacoco.xmlReportPaths' is not defined. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+INFO: No report imported, no coverage information will be imported by JaCoCo XML Report Importer
+INFO: Sensor JaCoCo XML Report Importer [jacoco] (done) | time=4ms
+INFO: Sensor CSS Rules [javascript]
+INFO: No CSS, PHP, HTML or VueJS files are found in the project. CSS analysis is skipped.
+INFO: Sensor CSS Rules [javascript] (done) | time=1ms
+INFO: Sensor ThymeLeaf template sensor [securityjavafrontend]
+INFO: Sensor ThymeLeaf template sensor [securityjavafrontend] (done) | time=3ms
+INFO: Sensor Serverless configuration file sensor [security]
+INFO: 0 Serverless function entries were found in the project
+INFO: 0 Serverless function handlers were kept as entrypoints
+INFO: Sensor Serverless configuration file sensor [security] (done) | time=10ms
+INFO: Sensor AWS SAM template file sensor [security]
+INFO: Sensor AWS SAM template file sensor [security] (done) | time=1ms
+INFO: ------------- Run sensors on module SyncChanges
+INFO: Sensor C# Project Type Information [csharp]
+INFO: Sensor C# Project Type Information [csharp] (done) | time=1ms
+INFO: Sensor C# Analysis Log [csharp]
+INFO: Roslyn version: 3.11.0.0
+INFO: Language version: CSharp7_3
+INFO: Concurrent execution: disabled
+INFO: Sensor C# Analysis Log [csharp] (done) | time=2ms
+INFO: Sensor C# Properties [csharp]
+INFO: Sensor C# Properties [csharp] (done) | time=1ms
+INFO: Sensor HTML [web]
+INFO: Sensor HTML [web] (done) | time=0ms
+INFO: Sensor Text Sensor [text]
+INFO: 7 source files to be analyzed
+INFO: 7/7 source files have been analyzed
+INFO: Sensor Text Sensor [text] (done) | time=31ms
+INFO: Sensor VB.NET Project Type Information [vbnet]
+INFO: Sensor VB.NET Project Type Information [vbnet] (done) | time=0ms
+INFO: Sensor VB.NET Analysis Log [vbnet]
+INFO: Sensor VB.NET Analysis Log [vbnet] (done) | time=1ms
+INFO: Sensor VB.NET Properties [vbnet]
+INFO: Sensor VB.NET Properties [vbnet] (done) | time=0ms
+INFO: Sensor JaCoCo XML Report Importer [jacoco]
+INFO: 'sonar.coverage.jacoco.xmlReportPaths' is not defined. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+INFO: No report imported, no coverage information will be imported by JaCoCo XML Report Importer
+INFO: Sensor JaCoCo XML Report Importer [jacoco] (done) | time=1ms
+INFO: Sensor CSS Rules [javascript]
+INFO: No CSS, PHP, HTML or VueJS files are found in the project. CSS analysis is skipped.
+INFO: Sensor CSS Rules [javascript] (done) | time=0ms
+INFO: Sensor ThymeLeaf template sensor [securityjavafrontend]
+INFO: Sensor ThymeLeaf template sensor [securityjavafrontend] (done) | time=1ms
+INFO: Sensor Serverless configuration file sensor [security]
+INFO: 0 Serverless function entries were found in the project
+INFO: 0 Serverless function handlers were kept as entrypoints
+INFO: Sensor Serverless configuration file sensor [security] (done) | time=1ms
+INFO: Sensor AWS SAM template file sensor [security]
+INFO: Sensor AWS SAM template file sensor [security] (done) | time=0ms
+INFO: ------------- Run sensors on module SyncChanges.Service
+INFO: Sensor IaC CloudFormation Sensor [iac]
+INFO: 0 source files to be analyzed
+INFO: 0/0 source files have been analyzed
+INFO: Sensor IaC CloudFormation Sensor [iac] (done) | time=5ms
+INFO: Sensor C# Project Type Information [csharp]
+INFO: Sensor C# Project Type Information [csharp] (done) | time=1ms
+INFO: Sensor C# Analysis Log [csharp]
+INFO: Roslyn version: 3.11.0.0
+INFO: Language version: CSharp7_3
+INFO: Concurrent execution: disabled
+INFO: Sensor C# Analysis Log [csharp] (done) | time=1ms
+INFO: Sensor C# Properties [csharp]
+INFO: Sensor C# Properties [csharp] (done) | time=0ms
+INFO: Sensor HTML [web]
+INFO: Sensor HTML [web] (done) | time=1ms
+INFO: Sensor Text Sensor [text]
+INFO: 4 source files to be analyzed
+INFO: 4/4 source files have been analyzed
+INFO: Sensor Text Sensor [text] (done) | time=7ms
+INFO: Sensor VB.NET Project Type Information [vbnet]
+INFO: Sensor VB.NET Project Type Information [vbnet] (done) | time=0ms
+INFO: Sensor VB.NET Analysis Log [vbnet]
+INFO: Sensor VB.NET Analysis Log [vbnet] (done) | time=0ms
+INFO: Sensor VB.NET Properties [vbnet]
+INFO: Sensor VB.NET Properties [vbnet] (done) | time=0ms
+INFO: Sensor JaCoCo XML Report Importer [jacoco]
+INFO: 'sonar.coverage.jacoco.xmlReportPaths' is not defined. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+INFO: No report imported, no coverage information will be imported by JaCoCo XML Report Importer
+INFO: Sensor JaCoCo XML Report Importer [jacoco] (done) | time=0ms
+INFO: Sensor CSS Rules [javascript]
+INFO: No CSS, PHP, HTML or VueJS files are found in the project. CSS analysis is skipped.
+INFO: Sensor CSS Rules [javascript] (done) | time=0ms
+INFO: Sensor ThymeLeaf template sensor [securityjavafrontend]
+INFO: Sensor ThymeLeaf template sensor [securityjavafrontend] (done) | time=0ms
+INFO: Sensor Serverless configuration file sensor [security]
+INFO: 0 Serverless function entries were found in the project
+INFO: 0 Serverless function handlers were kept as entrypoints
+INFO: Sensor Serverless configuration file sensor [security] (done) | time=5ms
+INFO: Sensor AWS SAM template file sensor [security]
+INFO: Sensor AWS SAM template file sensor [security] (done) | time=0ms
+INFO: ------------- Run sensors on module SyncChanges
+INFO: Sensor C# Project Type Information [csharp]
+INFO: Sensor C# Project Type Information [csharp] (done) | time=1ms
+INFO: Sensor C# Analysis Log [csharp]
+INFO: Roslyn version: 3.11.0.0
+INFO: Language version: CSharp7_3
+INFO: Concurrent execution: disabled
+INFO: Sensor C# Analysis Log [csharp] (done) | time=2ms
+INFO: Sensor C# Properties [csharp]
+INFO: Sensor C# Properties [csharp] (done) | time=1ms
+INFO: Sensor Text Sensor [text]
+INFO: 0 source files to be analyzed
+INFO: 0/0 source files have been analyzed
+INFO: Sensor Text Sensor [text] (done) | time=7ms
+INFO: Sensor VB.NET Project Type Information [vbnet]
+INFO: Sensor VB.NET Project Type Information [vbnet] (done) | time=1ms
+INFO: Sensor VB.NET Analysis Log [vbnet]
+INFO: Sensor VB.NET Analysis Log [vbnet] (done) | time=0ms
+INFO: Sensor VB.NET Properties [vbnet]
+INFO: Sensor VB.NET Properties [vbnet] (done) | time=0ms
+INFO: Sensor JaCoCo XML Report Importer [jacoco]
+INFO: 'sonar.coverage.jacoco.xmlReportPaths' is not defined. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+INFO: No report imported, no coverage information will be imported by JaCoCo XML Report Importer
+INFO: Sensor JaCoCo XML Report Importer [jacoco] (done) | time=0ms
+INFO: Sensor CSS Rules [javascript]
+INFO: No CSS, PHP, HTML or VueJS files are found in the project. CSS analysis is skipped.
+INFO: Sensor CSS Rules [javascript] (done) | time=1ms
+INFO: Sensor ThymeLeaf template sensor [securityjavafrontend]
+INFO: Sensor ThymeLeaf template sensor [securityjavafrontend] (done) | time=0ms
+INFO: Sensor Serverless configuration file sensor [security]
+INFO: 0 Serverless function entries were found in the project
+INFO: 0 Serverless function handlers were kept as entrypoints
+INFO: Sensor Serverless configuration file sensor [security] (done) | time=5ms
+INFO: Sensor AWS SAM template file sensor [security]
+INFO: Sensor AWS SAM template file sensor [security] (done) | time=0ms
+INFO: ------------- Run sensors on module mganss_SyncChanges
+INFO: Sensor C# Project Type Information [csharp]
+INFO: Sensor C# Project Type Information [csharp] (done) | time=0ms
+INFO: Sensor C# Analysis Log [csharp]
+INFO: Sensor C# Analysis Log [csharp] (done) | time=0ms
+INFO: Sensor C# Properties [csharp]
+INFO: Sensor C# Properties [csharp] (done) | time=0ms
+INFO: Sensor Text Sensor [text]
+INFO: 0 source files to be analyzed
+INFO: 0/0 source files have been analyzed
+INFO: Sensor Text Sensor [text] (done) | time=3ms
+INFO: Sensor VB.NET Project Type Information [vbnet]
+INFO: Sensor VB.NET Project Type Information [vbnet] (done) | time=0ms
+INFO: Sensor VB.NET Analysis Log [vbnet]
+INFO: Sensor VB.NET Analysis Log [vbnet] (done) | time=0ms
+INFO: Sensor VB.NET Properties [vbnet]
+INFO: Sensor VB.NET Properties [vbnet] (done) | time=0ms
+INFO: Sensor JaCoCo XML Report Importer [jacoco]
+INFO: 'sonar.coverage.jacoco.xmlReportPaths' is not defined. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+INFO: No report imported, no coverage information will be imported by JaCoCo XML Report Importer
+INFO: Sensor JaCoCo XML Report Importer [jacoco] (done) | time=1ms
+INFO: Sensor CSS Rules [javascript]
+INFO: No CSS, PHP, HTML or VueJS files are found in the project. CSS analysis is skipped.
+INFO: Sensor CSS Rules [javascript] (done) | time=0ms
+INFO: Sensor ThymeLeaf template sensor [securityjavafrontend]
+INFO: Sensor ThymeLeaf template sensor [securityjavafrontend] (done) | time=0ms
+INFO: Sensor Serverless configuration file sensor [security]
+INFO: 0 Serverless function entries were found in the project
+INFO: 0 Serverless function handlers were kept as entrypoints
+INFO: Sensor Serverless configuration file sensor [security] (done) | time=8ms
+INFO: Sensor AWS SAM template file sensor [security]
+INFO: Sensor AWS SAM template file sensor [security] (done) | time=0ms
+INFO: Sensor JavaSecuritySensor [security]
+INFO: Reading type hierarchy from: C:\projects\syncchanges\.sonarqube\out\.sonar\ucfg2\java
+INFO: Read 0 type definitions
+INFO: Reading UCFGs from: C:\projects\syncchanges\.sonarqube\out\.sonar\ucfg2\java
+INFO: No UCFGs have been included for analysis.
+INFO: Sensor JavaSecuritySensor [security] (done) | time=8ms
+INFO: Sensor CSharpSecuritySensor [security]
+INFO: Reading type hierarchy from: C:\projects\syncchanges\.sonarqube\out\ucfg_cs2
+INFO: Read 21 type definitions
+INFO: Reading UCFGs from: C:\projects\syncchanges\.sonarqube\out\ucfg_cs2
+INFO: 10:21:36.7504177 Building Runtime Type propagation graph
+INFO: 10:21:36.7614155 Running Tarjan on 50 nodes
+INFO: 10:21:36.7694164 Tarjan found 50 components
+INFO: 10:21:36.7724187 Variable type analysis: done
+INFO: 10:21:36.7734183 Building Runtime Type propagation graph
+INFO: 10:21:36.7754188 Running Tarjan on 50 nodes
+INFO: 10:21:36.776419 Tarjan found 50 components
+INFO: 10:21:36.776419 Variable type analysis: done
+INFO: Analyzing 11 ucfgs to detect vulnerabilities.
+INFO: All rules entrypoints : 0
+INFO: Retained UCFGs : 0
+INFO: Taint analysis starting. Entrypoints: 0
+INFO: Taint analysis: done.
+INFO: Sensor CSharpSecuritySensor [security] (done) | time=1443ms
+INFO: Sensor PhpSecuritySensor [security]
+INFO: Reading type hierarchy from: C:\projects\syncchanges\.sonarqube\out\.sonar\ucfg2\php
+INFO: Read 0 type definitions
+INFO: Reading UCFGs from: C:\projects\syncchanges\.sonarqube\out\.sonar\ucfg2\php
+INFO: No UCFGs have been included for analysis.
+INFO: Sensor PhpSecuritySensor [security] (done) | time=0ms
+INFO: Sensor PythonSecuritySensor [security]
+INFO: Reading type hierarchy from: C:\projects\syncchanges\.sonarqube\out\.sonar\ucfg2\python
+INFO: Read 0 type definitions
+INFO: Reading UCFGs from: C:\projects\syncchanges\.sonarqube\out\.sonar\ucfg2\python
+INFO: No UCFGs have been included for analysis.
+INFO: Sensor PythonSecuritySensor [security] (done) | time=1ms
+INFO: Sensor JsSecuritySensor [security]
+INFO: Reading type hierarchy from: C:\projects\syncchanges\.sonarqube\out\.sonar\ucfg2\js
+INFO: Read 0 type definitions
+INFO: Reading UCFGs from: C:\projects\syncchanges\.sonarqube\out\.sonar\ucfg2\js
+INFO: No UCFGs have been included for analysis.
+INFO: Sensor JsSecuritySensor [security] (done) | time=1ms
+INFO: ------------- Run sensors on project
+INFO: Sensor C# [csharp]
+INFO: Importing results from 6 proto files in 'C:\projects\syncchanges\.sonarqube\out\3\output-cs'
+INFO: Importing results from 6 proto files in 'C:\projects\syncchanges\.sonarqube\out\0\output-cs'
+INFO: Importing results from 6 proto files in 'C:\projects\syncchanges\.sonarqube\out\2\output-cs'
+INFO: Importing results from 6 proto files in 'C:\projects\syncchanges\.sonarqube\out\4\output-cs'
+INFO: Importing 4 Roslyn reports
+INFO: Found 4 MSBuild C# projects: 3 MAIN projects. 1 with no MAIN nor TEST files.
+INFO: Sensor C# [csharp] (done) | time=771ms
+INFO: Sensor C# Tests Coverage Report Import [csharp]
+INFO: Parsing the OpenCover report C:\projects\syncchanges\coverage.xml
+INFO: Adding this code coverage report to the cache for later reuse: C:\projects\syncchanges\coverage.xml
+INFO: Coverage Report Statistics: 7 files, 7 main files, 7 main files with coverage, 0 test files, 0 project excluded files, 0 other language files.
+INFO: Sensor C# Tests Coverage Report Import [csharp] (done) | time=755ms
+INFO: Sensor Zero Coverage Sensor
+INFO: Sensor Zero Coverage Sensor (done) | time=7ms
+INFO: CPD Executor 2 files had no CPD blocks
+INFO: CPD Executor Calculating CPD for 9 files
+INFO: CPD Executor CPD calculation finished (done) | time=29ms
+INFO: Analysis report generated in 955ms, dir size=283 KB
+INFO: Analysis report compressed in 57ms, zip size=77 KB
+INFO: Analysis report uploaded in 271ms
+INFO: ANALYSIS SUCCESSFUL, you can find the results at: https://sonarcloud.io/dashboard?id=mganss_SyncChanges
+INFO: Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+INFO: More about the report processing at https://sonarcloud.io/api/ce/task?id=AX6LmwjNEwNUe-8_aFkv
+INFO: Analysis total time: 20.053 s
+INFO: ------------------------------------------------------------------------
+INFO: EXECUTION SUCCESS
+INFO: ------------------------------------------------------------------------
+INFO: Total time: 51.119s
+INFO: Final Memory: 33M/114M
+INFO: ------------------------------------------------------------------------
+The SonarScanner CLI has finished
+10:21:41.082  Post-processing succeeded.
+pip install codecov
+Collecting codecov
+  Downloading codecov-2.1.12-py2.py3-none-any.whl (16 kB)
+Collecting coverage
+  Downloading coverage-6.2-cp310-cp310-win32.whl (182 kB)
+Collecting requests>=2.7.9
+  Downloading requests-2.27.1-py2.py3-none-any.whl (63 kB)
+Collecting charset-normalizer~=2.0.0
+  Downloading charset_normalizer-2.0.10-py3-none-any.whl (39 kB)
+Collecting certifi>=2017.4.17
+  Downloading certifi-2021.10.8-py2.py3-none-any.whl (149 kB)
+Collecting urllib3<1.27,>=1.21.1
+  Downloading urllib3-1.26.8-py2.py3-none-any.whl (138 kB)
+Collecting idna<4,>=2.5
+  Downloading idna-3.3-py3-none-any.whl (61 kB)
+Installing collected packages: urllib3, idna, charset-normalizer, certifi, requests, coverage, codecov
+Successfully installed certifi-2021.10.8 charset-normalizer-2.0.10 codecov-2.1.12 coverage-6.2 idna-3.3 requests-2.27.1 urllib3-1.26.8
+WARNING: You are using pip version 21.2.4; however, version 21.3.1 is available.
+You should consider upgrading via the 'C:\Python310\python.exe -m pip install --upgrade pip' command.
+codecov -f "coverage.xml"
+      _____          _
+     / ____|        | |
+    | |     ___   __| | ___  ___ _____   __
+    | |    / _ \ / _  |/ _ \/ __/ _ \ \ / /
+    | |___| (_) | (_| |  __/ (_| (_) \ V /
+     \_____\___/ \____|\___|\___\___/ \_/
+                                    v2.1.12
+==> Detecting CI provider
+    AppVeyor Detected
+==> Preparing upload
+==> Processing gcov (disable by -X gcov)
+==> Collecting reports
+XX> Searching for reports disabled
+    Targeting specific files
+    + coverage.xml bytes=136770
+==> Uploading
+    .url https://codecov.io
+    .query commit=03e6cd0e405ee1f1d5aa1f21ee29e5c796d19c75&branch=master&job=mganss%2Fsyncchanges%2F3.0.405&service=appveyor&build=sit0u6arhoq6g2et&slug=mganss%2FSyncChanges&package=py2.1.12
+    Gzipping contents..
+    Compressed contents to 11351 bytes
+    Pinging Codecov...
+    Uploading to S3...
+    Uploading to S3 took 0:00:00.237743
+    https://codecov.io/github/mganss/SyncChanges/commit/03e6cd0e405ee1f1d5aa1f21ee29e5c796d19c75
+Collecting artifacts...
+Found artifact 'SyncChanges\bin\Release\SyncChanges.3.0.405.nupkg' matching 'SyncChanges\**\*.*nupkg' path
+Found artifact 'SyncChanges\bin\Release\SyncChanges.3.0.405.snupkg' matching 'SyncChanges\**\*.*nupkg' path
+Found artifact 'SyncChanges.Console\bin\Release\SyncChanges.Console.3.0.405.nupkg' matching 'SyncChanges.Console\**\*.*nupkg' path
+Found artifact 'SyncChanges.Console\bin\Release\SyncChanges.Console.3.0.405.snupkg' matching 'SyncChanges.Console\**\*.*nupkg' path
+Found artifact 'SyncChanges.Console.3.0.405.zip' matching 'SyncChanges.Console.3.0.405.zip' path
+Found artifact 'SyncChanges.Service\bin\Release\SyncChanges.Service.3.0.405.nupkg' matching 'SyncChanges.Service\**\*.*nupkg' path
+Found artifact 'SyncChanges.Service\bin\Release\SyncChanges.Service.3.0.405.snupkg' matching 'SyncChanges.Service\**\*.*nupkg' path
+Found artifact 'SyncChanges.Service.3.0.405.zip' matching 'SyncChanges.Service.3.0.405.zip' path
+Uploading artifacts...
+[1/8] SyncChanges\bin\Release\SyncChanges.3.0.405.nupkg (18,854 bytes)...100%
+[2/8] SyncChanges\bin\Release\SyncChanges.3.0.405.snupkg (11,669 bytes)...100%
+[3/8] SyncChanges.Console\bin\Release\SyncChanges.Console.3.0.405.nupkg (6,745 bytes)...100%
+[4/8] SyncChanges.Console\bin\Release\SyncChanges.Console.3.0.405.snupkg (10,058 bytes)...100%
+[5/8] SyncChanges.Console.3.0.405.zip (5,930,684 bytes)...100%
+[6/8] SyncChanges.Service\bin\Release\SyncChanges.Service.3.0.405.nupkg (6,738 bytes)...100%
+[7/8] SyncChanges.Service\bin\Release\SyncChanges.Service.3.0.405.snupkg (9,375 bytes)...100%
+[8/8] SyncChanges.Service.3.0.405.zip (5,809,237 bytes)...100%
+Deploying using GitHub provider
+Creating "3.0.405" release for repository "mganss/SyncChanges" tag "v3.0.405" commit "03e6cd0e405ee1f1d5aa1f21ee29e5c796d19c75"...OK
+Uploading "SyncChanges.Console.3.0.405.zip" to release assets...OK
+Uploading "SyncChanges.Service.3.0.405.zip" to release assets...OK
+Build success
